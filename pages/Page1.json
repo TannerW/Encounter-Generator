@@ -8,19 +8,19 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 450,
+          "rightColumn": 960,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1320,
+          "bottomRow": 820,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 53,
-          "minHeight": 1292,
+          "minHeight": 830,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
@@ -97,13 +97,399 @@
               "chartName": "Sales Report",
               "xAxisName": "Product Line",
               "chartType": "LINE_CHART"
+            },
+            {
+              "widgetName": "Table1",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "monster_id",
+                "name",
+                "icon_link",
+                "type",
+                "subtype",
+                "cr",
+                "source",
+                "size",
+                "alignment",
+                "environment_orig",
+                "environment_cust",
+                "tag_orig",
+                "tag_cust",
+                "avrae_parsed",
+                "statblock_parse"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 34,
+              "bottomRow": 62,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onRowSelected"
+                }
+              ],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.monster_id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.icon_link.computedValue"
+                },
+                {
+                  "key": "primaryColumns.type.computedValue"
+                },
+                {
+                  "key": "primaryColumns.subtype.computedValue"
+                },
+                {
+                  "key": "primaryColumns.cr.computedValue"
+                },
+                {
+                  "key": "primaryColumns.source.computedValue"
+                },
+                {
+                  "key": "primaryColumns.size.computedValue"
+                },
+                {
+                  "key": "primaryColumns.alignment.computedValue"
+                },
+                {
+                  "key": "primaryColumns.environment_orig.computedValue"
+                },
+                {
+                  "key": "primaryColumns.environment_cust.computedValue"
+                },
+                {
+                  "key": "primaryColumns.tag_orig.computedValue"
+                },
+                {
+                  "key": "primaryColumns.tag_cust.computedValue"
+                },
+                {
+                  "key": "primaryColumns.avrae_parsed.computedValue"
+                },
+                {
+                  "key": "primaryColumns.statblock_parse.computedValue"
+                }
+              ],
+              "leftColumn": 0,
+              "primaryColumns": {
+                "monster_id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "monster_id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "monster_id",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.monster_id))}}"
+                },
+                "name": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
+                },
+                "icon_link": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "icon_link",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "icon_link",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.icon_link))}}"
+                },
+                "type": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "type",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "type",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.type))}}"
+                },
+                "subtype": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "subtype",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "subtype",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.subtype))}}"
+                },
+                "cr": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "cr",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "cr",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.cr))}}"
+                },
+                "source": {
+                  "index": 6,
+                  "width": 150,
+                  "id": "source",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "source",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.source))}}"
+                },
+                "size": {
+                  "index": 7,
+                  "width": 150,
+                  "id": "size",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "size",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.size))}}"
+                },
+                "alignment": {
+                  "index": 8,
+                  "width": 150,
+                  "id": "alignment",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "alignment",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.alignment))}}"
+                },
+                "environment_orig": {
+                  "index": 9,
+                  "width": 150,
+                  "id": "environment_orig",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "environment_orig",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.environment_orig))}}"
+                },
+                "environment_cust": {
+                  "index": 10,
+                  "width": 150,
+                  "id": "environment_cust",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "environment_cust",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.environment_cust))}}"
+                },
+                "tag_orig": {
+                  "index": 11,
+                  "width": 150,
+                  "id": "tag_orig",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "tag_orig",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.tag_orig))}}"
+                },
+                "tag_cust": {
+                  "index": 12,
+                  "width": 150,
+                  "id": "tag_cust",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "tag_cust",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.tag_cust))}}"
+                },
+                "avrae_parsed": {
+                  "index": 13,
+                  "width": 150,
+                  "id": "avrae_parsed",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "avrae_parsed",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.avrae_parsed))}}"
+                },
+                "statblock_parse": {
+                  "index": 14,
+                  "width": 150,
+                  "id": "statblock_parse",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "statblock_parse",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.statblock_parse))}}"
+                }
+              },
+              "delimiter": ",",
+              "onRowSelected": "{{Query1.run()}}",
+              "key": "aac9ew8f4g",
+              "derivedColumns": {},
+              "rightColumn": 52,
+              "textSize": "PARAGRAPH",
+              "widgetId": "fl6118v9vt",
+              "isVisibleFilters": true,
+              "tableData": "{{Query3.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "primaryColumnId": "monster_id",
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75
+              }
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Page1_Query3",
+              "name": "Query3",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "widgetNames": [
           "Chart1",
-          "MainContainer"
+          "MainContainer",
+          "Table1"
         ],
         "validOnPageLoadActions": true,
         "id": "Page1",

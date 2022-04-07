@@ -1,5 +1,5 @@
 {
-  "isPublic": false,
+  "isPublic": true,
   "viewMode": false,
   "appIsExample": false,
   "unreadCommentThreads": 0,
@@ -7,10 +7,10 @@
   "icon": "sunflower",
   "slug": "untitled-application-1",
   "unpublishedAppLayout": {
-    "type": "MOBILE"
+    "type": "TABLET_LARGE"
   },
   "publishedAppLayout": {
-    "type": "MOBILE"
+    "type": "TABLET_LARGE"
   },
   "evaluationVersion": 2,
   "createdAt": {

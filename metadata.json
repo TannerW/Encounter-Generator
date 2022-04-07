@@ -5,6 +5,10 @@
   "publishedDefaultPageName": "Page1",
   "unpublishedDefaultPageName": "Page1",
   "invisibleActionFields": {
+    "Page1_Query3": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Dnd-monster-app-images_DeleteFile": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -16,6 +20,14 @@
     "Dnd-monster-app-images_ListFiles": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
+    },
+    "Page1_Query1": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Page1_Query2": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
     },
     "Dnd-monster-app-images_UpdateFile": {
       "unpublishedUserSetOnLoad": false,
