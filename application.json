@@ -7,10 +7,10 @@
   "icon": "sunflower",
   "slug": "untitled-application-1",
   "unpublishedAppLayout": {
-    "type": "TABLET_LARGE"
+    "type": "MOBILE"
   },
   "publishedAppLayout": {
-    "type": "TABLET_LARGE"
+    "type": "MOBILE"
   },
   "evaluationVersion": 2,
   "createdAt": {

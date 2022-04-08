@@ -9,6 +9,18 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Page1_Query4": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Page1_get_one_random_monster": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Page1_get_monster_image": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Dnd-monster-app-images_DeleteFile": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -20,14 +32,6 @@
     "Dnd-monster-app-images_ListFiles": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
-    },
-    "Page1_Query1": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Page1_Query2": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
     },
     "Dnd-monster-app-images_UpdateFile": {
       "unpublishedUserSetOnLoad": false,

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "amazons3-plugin",
   "unpublishedAction": {
-    "name": "Query2",
+    "name": "get_monster_image",
     "datasource": {
       "pluginId": "amazons3-plugin",
       "messages": [],
@@ -16,18 +16,10 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "",
       "encodeParamsToggle": true,
-      "body": "",
       "formData": {
-        "command": "READ_FILE",
-        "bucket": "",
-        "create": {
-          "dataType": "YES",
-          "expiry": "5"
-        },
+        "bucket": "dnd-monster-app-images",
         "list": {
-          "prefix": "",
           "where": {
             "condition": "AND",
             "children": [
@@ -36,34 +28,37 @@
               }
             ]
           },
-          "signedUrl": "NO",
-          "expiry": "5",
+          "signedUrl": "YES",
           "unSignedUrl": "YES",
           "sortBy": [
             {
               "column": "",
               "order": "Ascending"
             }
-          ]
+          ],
+          "prefix": "{{get_one_random_monster.data[0].monster_id}}.png"
         },
-        "read": {
-          "usingBase64Encoding": "YES"
-        },
-        "smartSubstitution": true
+        "command": "LIST"
       }
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.list.prefix"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "get_one_random_monster.data[0].monster_id"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Query2",
+  "id": "Page1_get_monster_image",
   "deleted": false,
-  "gitSyncId": "623d0077c45d83022e3fd3ff_624e50457b1ead7a3249f7ab"
+  "gitSyncId": "623d0077c45d83022e3fd3ff_624f88b48cd00a3f6be67156"
 }

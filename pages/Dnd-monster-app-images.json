@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 960,
+          "rightColumn": 1080,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -20,7 +20,7 @@
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 53,
-          "minHeight": 830,
+          "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicTriggerPathList": [],
           "dynamicBindingPathList": [],
