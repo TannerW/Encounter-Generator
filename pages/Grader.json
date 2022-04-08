@@ -101,8 +101,13 @@
             },
             {
               "widgetName": "Submit",
-              "onClick": "{{get_one_random_monster.run(() => get_monster_image.run(), () => {})}}",
+              "onClick": "{{get_one_random_monster.run(() => {\n\t\n    get_monster_image.run();\nresetWidget(\"Environment_Select\",true)\n\t\n},\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t () => {})\n\n}}",
               "buttonColor": "#03B365",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca02633.svg",
               "topRow": 61,
@@ -454,7 +459,7 @@
               "width": 456
             },
             {
-              "widgetName": "SwitchGroup1",
+              "widgetName": "Environment_Select",
               "isCanvas": false,
               "displayName": "Switch Group",
               "iconSVG": "/static/media/icon.c98225ee.svg",
@@ -560,13 +565,13 @@
           "ButtonGroup1",
           "Canvas1",
           "Divider1",
+          "Environment_Select",
           "IconButton1",
           "MainContainer",
           "Modal1",
           "Monster_Image",
           "Rating1",
           "Submit",
-          "SwitchGroup1",
           "Text1",
           "Text2",
           "Title"
