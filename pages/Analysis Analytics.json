@@ -168,7 +168,7 @@
               "displayName": "Divider",
               "iconSVG": "/static/media/icon.cbe8f608.svg",
               "topRow": 12,
-              "bottomRow": 20,
+              "bottomRow": 24,
               "parentRowSpace": 10,
               "type": "DIVIDER_WIDGET",
               "capType": "nc",
@@ -219,7 +219,7 @@
               "isLoading": false
             },
             {
-              "widgetName": "Text1",
+              "widgetName": "num_of_npcs",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
               "topRow": 12,
@@ -254,7 +254,7 @@
               "fontSize": "PARAGRAPH"
             },
             {
-              "widgetName": "Text2",
+              "widgetName": "num_of_seen_npcs",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
               "topRow": 16,
@@ -287,6 +287,76 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "num_of_ddb_descriptions",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 20,
+              "bottomRow": 24,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "Monsters with DDB Descriptions: {{num_monsters_with_ddb_desc.data[0].count}}",
+              "key": "dq9l1pkz29",
+              "rightColumn": 29,
+              "textAlign": "LEFT",
+              "widgetId": "uqt9k8i4t5",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "shouldScroll": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "Text1",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 20,
+              "bottomRow": 24,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 32,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "Number of Avrae Parsed: {{num_avrae_parsed.data[0].count}}",
+              "key": "dq9l1pkz29",
+              "rightColumn": 64,
+              "textAlign": "LEFT",
+              "widgetId": "b9glhtzeyu",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "shouldScroll": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
             }
           ]
         },
@@ -295,6 +365,14 @@
             {
               "id": "Analysis Analytics_num_environments",
               "name": "num_environments",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Analysis Analytics_num_monsters_with_ddb_desc",
+              "name": "num_monsters_with_ddb_desc",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -343,10 +421,12 @@
           "Divider2",
           "MainContainer",
           "Text1",
-          "Text2",
           "bar_percent_avrae_parsed",
           "num_environment",
           "num_monsters",
+          "num_of_ddb_descriptions",
+          "num_of_npcs",
+          "num_of_seen_npcs",
           "percent_avrae_parsed"
         ],
         "validOnPageLoadActions": true,

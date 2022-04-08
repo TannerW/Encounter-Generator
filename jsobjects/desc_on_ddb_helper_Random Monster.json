@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "desc_on_ddb_helper",
+    "pageId": "Random Monster",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\t\n\tinit: () => {\n\t\tif (get_one_random_monster.data[0].ddb_description == undefined || get_one_random_monster.data[0].ddb_description == '') {\n\t\t\tif (get_one_random_monster.data[0].has_description_on_ddb == undefined) {\n\t\t\t\tstoreValue(\"desc_on_ddb\", undefined);\n\t\t\t} else {\n\t\t\t\tstoreValue(\"desc_on_ddb\", get_one_random_monster.data[0].has_description_on_ddb);\n\t\t\t}\n\t\t} else {\n\t\t\tstoreValue(\"desc_on_ddb\", true);\n\t\t}\n\t\treturn 0;\n\t},\n\t\n\tenable_desc_menu_option: () => {\n\t\tif (appsmith.store.desc_on_ddb != false) {\n\t\t\treturn true;\n\t\t} else {\n\t\t\treturn false;\n\t\t}\n\t},\n\t\n\tgenerate_set_ddb_description: () => {\n\t\tif (DDB_description.text != '' && appsmith.store.desc_on_ddb != false) {\n\t\t\treturn DDB_description.text;\n\t\t} else {\n\t\t\treturn 'NULL';\n\t\t}\n\t},\n\n\tgenerate_set_has_description_on_ddb: () => {\n\t\tif (DDB_description.text != '' && appsmith.store.desc_on_ddb != false) {\n\t\t\treturn 'true';\n\t\t} else {\n\t\t\tif (appsmith.store.desc_on_ddb == undefined) {\n\t\t\t\treturn 'NULL';\n\t\t\t} else {\n\t\t\t\treturn 'false';\n\t\t\t}\n\t\t}\n\t}\n}",
+    "variables": []
+  },
+  "id": "Random Monster_desc_on_ddb_helper",
+  "deleted": false,
+  "gitSyncId": "623d0077c45d83022e3fd3ff_6250946ad47d49666c37d112"
+}

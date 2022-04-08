@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE public.\"monsters\" SET\n\t\t\"is_npc\" = {{is_an_npc.isChecked}},\n\t\t\"npc_has_been_seen\" = {{npc_has_been_seen.isChecked}},\n\t\t\"ddb_description\" = '{{DDB_description.text}}'\n  WHERE monster_id = {{get_one_random_monster.data[0].monster_id}}; -- Specify a valid condition here. Removing the condition may update every row in the table!"
+      "body": "UPDATE public.\"monsters\" SET\n\t\t\"is_npc\" = {{is_an_npc.isChecked}},\n\n\t\t\"npc_has_been_seen\" = {{npc_has_been_seen.isChecked}},\n\n\t\t-- ddb_description\n\t\t\"ddb_description\" = {{desc_on_ddb_helper.generate_set_ddb_description()}},\n\n\t\t-- has_description_on_ddb\n\t\t\"has_description_on_ddb\" = {{desc_on_ddb_helper.generate_set_has_description_on_ddb()}}\n  WHERE monster_id = {{get_one_random_monster.data[0].monster_id}}; -- Specify a valid condition here. Removing the condition may update every row in the table!"
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -29,7 +29,8 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "DDB_description.text",
+      "desc_on_ddb_helper.generate_set_ddb_description()",
+      "desc_on_ddb_helper.generate_set_has_description_on_ddb()",
       "get_one_random_monster.data[0].monster_id",
       "is_an_npc.isChecked",
       "npc_has_been_seen.isChecked"
