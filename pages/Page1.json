@@ -26,7 +26,7 @@
           "leftColumn": 0,
           "children": [
             {
-              "widgetName": "Image1",
+              "widgetName": "Monster_Image",
               "displayName": "Image",
               "iconSVG": "/static/media/icon.52d8fb96.svg",
               "topRow": 7,
@@ -60,7 +60,7 @@
               "enableRotation": false
             },
             {
-              "widgetName": "Text1",
+              "widgetName": "Title",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
               "topRow": 0,
@@ -95,13 +95,13 @@
               "fontSize": "HEADING1"
             },
             {
-              "widgetName": "Button1",
+              "widgetName": "Submit",
               "onClick": "{{get_one_random_monster.run(() => get_monster_image.run(), () => {})}}",
               "buttonColor": "#03B365",
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca02633.svg",
-              "topRow": 46,
-              "bottomRow": 50,
+              "topRow": 77,
+              "bottomRow": 81,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -112,12 +112,12 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 13,
+              "leftColumn": 46,
               "dynamicBindingPathList": [],
-              "text": "Next",
+              "text": "Submit",
               "isDisabled": false,
               "key": "zpl1e12hrb",
-              "rightColumn": 29,
+              "rightColumn": 62,
               "isDefaultClickDisabled": true,
               "widgetId": "zqn1npr3rv",
               "isVisible": true,
@@ -128,10 +128,89 @@
               "isLoading": false,
               "buttonVariant": "PRIMARY",
               "placement": "CENTER"
+            },
+            {
+              "widgetName": "Rating1",
+              "displayName": "Rating",
+              "iconSVG": "/static/media/icon.914eb943.svg",
+              "topRow": 49,
+              "bottomRow": 53,
+              "parentRowSpace": 10,
+              "type": "RATE_WIDGET",
+              "maxCount": 5,
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 1,
+              "dynamicBindingPathList": [],
+              "isDisabled": false,
+              "key": "l9a2z90rib",
+              "isRequired": false,
+              "rightColumn": 31,
+              "inactiveColor": "#D6D6D6",
+              "widgetId": "i753a4u75d",
+              "isVisible": true,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "defaultRate": 3,
+              "activeColor": "#FFCB45",
+              "size": "LARGE",
+              "isAllowHalf": false,
+              "tooltips": "[\n  \"Terrible\",\n  \"Bad\",\n  \"Neutral\",\n  \"Good\",\n  \"Great\"\n]"
+            },
+            {
+              "widgetName": "MultiSelect1",
+              "isFilterable": true,
+              "displayName": "MultiSelect",
+              "iconSVG": "/static/media/icon.a3495809.svg",
+              "labelText": "Environment",
+              "topRow": 45,
+              "bottomRow": 49,
+              "parentRowSpace": 10,
+              "type": "MULTI_SELECT_WIDGET_V2",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "{{get_one_random_monster.data[0].environment_orig}}",
+              "animateLoading": true,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 1,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                },
+                {
+                  "key": "defaultOptionValue"
+                }
+              ],
+              "options": "{{ all_environments.data.map((row) => { \n      return { label: row.name, value: row.name } \n   }) \n}}",
+              "placeholderText": "Select option(s)",
+              "isDisabled": false,
+              "key": "phwt1f0275",
+              "isRequired": false,
+              "rightColumn": 21,
+              "widgetId": "zsy1l383dj",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
             }
           ]
         },
         "layoutOnLoadActions": [
+          [
+            {
+              "id": "Page1_all_environments",
+              "name": "all_environments",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
           [
             {
               "id": "Page1_get_one_random_monster",
@@ -156,10 +235,12 @@
           ]
         ],
         "widgetNames": [
-          "Button1",
-          "Image1",
           "MainContainer",
-          "Text1"
+          "Monster_Image",
+          "MultiSelect1",
+          "Rating1",
+          "Submit",
+          "Title"
         ],
         "validOnPageLoadActions": true,
         "id": "Page1",
