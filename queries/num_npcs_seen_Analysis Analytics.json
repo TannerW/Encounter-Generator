@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_one_random_monster",
+    "name": "num_npcs_seen",
     "datasource": {
       "pluginId": "postgres-plugin",
       "messages": [],
@@ -12,12 +12,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Grader",
+    "pageId": "Analysis Analytics",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT *\nFROM public.monsters\nORDER BY random()\nLIMIT 1;"
+      "body": "SELECT COUNT(*) FROM public.\"monsters\" WHERE npc_has_been_seen=true;"
     },
     "executeOnLoad": true,
     "dynamicBindingPathList": [],
@@ -25,12 +25,12 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Grader_get_one_random_monster",
+  "id": "Analysis Analytics_num_npcs_seen",
   "deleted": false,
-  "gitSyncId": "623d0077c45d83022e3fd3ff_624f8a8a8cd00a3f6be67166"
+  "gitSyncId": "623d0077c45d83022e3fd3ff_625061bcd47d49666c37d06c"
 }
