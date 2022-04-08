@@ -9,6 +9,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Grader_Query5": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Dnd-monster-app-images_DeleteFile": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -34,6 +38,10 @@
       "publishedUserSetOnLoad": false
     },
     "Grader_Query3": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Grader_CreateFile": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
