@@ -57,7 +57,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "progress": "{{num_avrae_parsed.data[0].count / num_total_monsters.data[0].count * 100}}",
+              "progress": "{{(num_avrae_parsed.data[0].count / num_total_monsters.data[0].count * 100).toPrecision(4)}}",
               "barType": "determinate"
             },
             {
