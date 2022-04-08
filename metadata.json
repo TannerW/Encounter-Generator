@@ -2,22 +2,14 @@
   "fileFormatVersion": 1,
   "clientSchemaVersion": 1,
   "serverSchemaVersion": 2,
-  "publishedDefaultPageName": "Page1",
-  "unpublishedDefaultPageName": "Page1",
+  "publishedDefaultPageName": "Grader",
+  "unpublishedDefaultPageName": "Grader",
   "invisibleActionFields": {
-    "Page1_Query3": {
+    "Grader_Query3": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Page1_Query4": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Page1_get_one_random_monster": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Page1_get_monster_image": {
+    "Grader_get_one_random_monster": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
@@ -29,11 +21,27 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Grader_Query4": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Analysis Analytics_num_avrae_parsed": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Analysis Analytics_num_total_monsters": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Dnd-monster-app-images_ListFiles": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
-    "Page1_all_environments": {
+    "Grader_get_monster_image": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Grader_all_environments": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

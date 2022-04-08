@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_one_random_monster",
+    "name": "Query3",
     "datasource": {
       "pluginId": "postgres-plugin",
       "messages": [],
@@ -12,14 +12,19 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Page1",
+    "pageId": "Grader",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT *\nFROM public.monsters\nORDER BY random()\nLIMIT 1;"
+      "body": "SELECT * FROM monsters ORDER BY monster_id LIMIT 10;",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": true
+        }
+      ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -30,7 +35,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_get_one_random_monster",
+  "id": "Grader_Query3",
   "deleted": false,
-  "gitSyncId": "623d0077c45d83022e3fd3ff_624f8a8a8cd00a3f6be67166"
+  "gitSyncId": "623d0077c45d83022e3fd3ff_624e50807b1ead7a3249f7ad"
 }

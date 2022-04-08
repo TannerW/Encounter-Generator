@@ -1,0 +1,137 @@
+{
+  "unpublishedPage": {
+    "name": "Analysis Analytics",
+    "slug": "analysis-analytics",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 790,
+          "containerStyle": "none",
+          "snapRows": 79,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 53,
+          "minHeight": 800,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "ProgressBar1",
+              "isCanvas": false,
+              "displayName": "Progress Bar",
+              "iconSVG": "/static/media/icon.9b0d7b96.svg",
+              "topRow": 5,
+              "bottomRow": 9,
+              "parentRowSpace": 10,
+              "type": "PROGRESSBAR_WIDGET",
+              "hideCard": false,
+              "fillColor": "#03B365",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "progress"
+                },
+                {
+                  "key": "steps"
+                }
+              ],
+              "key": "kxf30cfj1f",
+              "showResult": true,
+              "rightColumn": 64,
+              "widgetId": "nhgraq8170",
+              "isVisible": true,
+              "steps": "{{num_total_monsters.data[0].count / num_total_monsters.data[0].count * 100}}",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "progress": "{{num_avrae_parsed.data[0].count / num_total_monsters.data[0].count * 100}}",
+              "barType": "determinate"
+            },
+            {
+              "widgetName": "Text1",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 0,
+              "bottomRow": 4,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "Percent of Avrae Parsed",
+              "key": "2p4jbgkjp5",
+              "rightColumn": 31,
+              "textAlign": "LEFT",
+              "widgetId": "ydf8rb0z8m",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "shouldScroll": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Analysis Analytics_num_total_monsters",
+              "name": "num_total_monsters",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Analysis Analytics_num_avrae_parsed",
+              "name": "num_avrae_parsed",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "widgetNames": [
+          "MainContainer",
+          "ProgressBar1",
+          "Text1"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Analysis Analytics",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "policies": [],
+  "gitSyncId": "623d0077c45d83022e3fd3ff_624f92df8cd00a3f6be6722a"
+}
