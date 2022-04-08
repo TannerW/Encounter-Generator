@@ -37,14 +37,6 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
-    "Random Monster_myFun2": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Random Monster_myFun1": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Analysis Analytics_num_npcs_seen": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false

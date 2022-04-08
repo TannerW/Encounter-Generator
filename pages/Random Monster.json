@@ -287,7 +287,7 @@
                   "displayName": "Canvas",
                   "widgetId": "pc7yiujhgs",
                   "topRow": 0,
-                  "bottomRow": 240,
+                  "bottomRow": 420,
                   "parentRowSpace": 1,
                   "isVisible": true,
                   "type": "CANVAS_WIDGET",
@@ -296,7 +296,7 @@
                   "hideCard": true,
                   "parentId": "krnqm3ydf1",
                   "shouldScrollContents": false,
-                  "minHeight": 0,
+                  "minHeight": 424,
                   "renderMode": "CANVAS",
                   "isLoading": false,
                   "parentColumnSpace": 1,
@@ -363,7 +363,7 @@
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 5,
-                      "bottomRow": 22,
+                      "bottomRow": 36,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -378,7 +378,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{get_one_random_monster.data[0].statblock_parse}}",
+                      "text": "{{JSON.stringify(get_one_random_monster.data[0].statblock_parse, null, '\\t')\n}}",
                       "key": "2p4jbgkjp5",
                       "rightColumn": 64,
                       "textAlign": "LEFT",
@@ -399,7 +399,7 @@
                 }
               ],
               "key": "5uif9105ew",
-              "height": 240,
+              "height": 424,
               "rightColumn": 0,
               "detachFromLayout": true,
               "widgetId": "krnqm3ydf1",
@@ -409,7 +409,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "width": 456
+              "width": 427.5
             },
             {
               "widgetName": "DDB_description_modal",
@@ -536,6 +536,11 @@
                     },
                     {
                       "widgetName": "DDB_description",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isDisabled"
+                        }
+                      ],
                       "displayName": "Rich Text Editor",
                       "iconSVG": "/static/media/icon.b35e139c.svg",
                       "topRow": 5,
@@ -550,10 +555,13 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "defaultText"
+                        },
+                        {
+                          "key": "isDisabled"
                         }
                       ],
                       "inputType": "html",
-                      "isDisabled": false,
+                      "isDisabled": "{{get_one_random_monster.data[0].ddb_description != null}}",
                       "key": "11mlvfeu20",
                       "isRequired": false,
                       "rightColumn": 64,
