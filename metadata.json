@@ -5,10 +5,6 @@
   "publishedDefaultPageName": "Grader",
   "unpublishedDefaultPageName": "Grader",
   "invisibleActionFields": {
-    "Grader_Query3": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Grader_get_one_random_monster": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -30,6 +26,14 @@
       "publishedUserSetOnLoad": false
     },
     "Analysis Analytics_num_total_monsters": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Analysis Analytics_num_environments": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Grader_Query3": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

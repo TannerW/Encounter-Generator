@@ -13,21 +13,22 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 790,
+          "bottomRow": 880,
           "containerStyle": "none",
           "snapRows": 79,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 53,
-          "minHeight": 800,
+          "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
           "children": [
             {
-              "widgetName": "ProgressBar1",
+              "widgetName": "bar_percent_avrae_parsed",
               "isCanvas": false,
+              "dynamicPropertyPathList": [],
               "displayName": "Progress Bar",
               "iconSVG": "/static/media/icon.9b0d7b96.svg",
               "topRow": 5,
@@ -61,7 +62,7 @@
               "barType": "determinate"
             },
             {
-              "widgetName": "Text1",
+              "widgetName": "percent_avrae_parsed",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
               "topRow": 0,
@@ -90,10 +91,119 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "num_environment",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 10,
+              "bottomRow": 14,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "Number of Environments: {{num_environments.data[0].count}}",
+              "key": "2p4jbgkjp5",
+              "rightColumn": 29,
+              "textAlign": "LEFT",
+              "widgetId": "9wazwtgf5f",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "shouldScroll": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "num_monsters",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 15,
+              "bottomRow": 19,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "Number of Monsters: {{num_total_monsters.data[0].count}}",
+              "key": "2p4jbgkjp5",
+              "rightColumn": 29,
+              "textAlign": "LEFT",
+              "widgetId": "wlv0ihcw05",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "shouldScroll": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "Divider1",
+              "thickness": 2,
+              "displayName": "Divider",
+              "iconSVG": "/static/media/icon.cbe8f608.svg",
+              "topRow": 10,
+              "bottomRow": 19,
+              "parentRowSpace": 10,
+              "type": "DIVIDER_WIDGET",
+              "capType": "nc",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 29,
+              "dynamicBindingPathList": [],
+              "key": "tkdqjjkqi1",
+              "dividerColor": "#EBEBEB",
+              "orientation": "vertical",
+              "strokeStyle": "solid",
+              "rightColumn": 32,
+              "widgetId": "w03qe7zkme",
+              "capSide": 0,
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
             }
           ]
         },
         "layoutOnLoadActions": [
+          [
+            {
+              "id": "Analysis Analytics_num_environments",
+              "name": "num_environments",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
           [
             {
               "id": "Analysis Analytics_num_total_monsters",
@@ -116,9 +226,12 @@
           ]
         ],
         "widgetNames": [
+          "Divider1",
           "MainContainer",
-          "ProgressBar1",
-          "Text1"
+          "bar_percent_avrae_parsed",
+          "num_environment",
+          "num_monsters",
+          "percent_avrae_parsed"
         ],
         "validOnPageLoadActions": true,
         "id": "Analysis Analytics",
