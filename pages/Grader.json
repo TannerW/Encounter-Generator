@@ -102,7 +102,7 @@
             },
             {
               "widgetName": "Submit",
-              "onClick": "{{get_one_random_monster.run(() => {\n\t\n    get_monster_image.run();\nresetWidget(\"DDB_description_modal\",true);\nresetWidget(\"Import_Image\",true);\nresetWidget(\"info_container\",true)\n\t\n},\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t () => {})\n\n}}",
+              "onClick": "{{submit.run(() => {\n\t\tget_one_random_monster.run(() => {\n\t\t\tget_monster_image.run();\nresetWidget(\"DDB_description_modal\",true);\nresetWidget(\"Import_Image\",true);\nresetWidget(\"info_container\",true)\n\t\t},() => {})\n\t\n},\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t () => {})\n\n}}",
               "buttonColor": "#03B365",
               "dynamicPropertyPathList": [
                 {
@@ -201,7 +201,8 @@
                       "isVisible": true,
                       "isDisabled": false,
                       "index": 0,
-                      "iconName": "new-text-box"
+                      "iconName": "new-text-box",
+                      "iconColor": ""
                     },
                     "menuItem2": {
                       "label": "Import Image",
@@ -687,8 +688,8 @@
                       "widgetName": "Rating1",
                       "displayName": "Rating",
                       "iconSVG": "/static/media/icon.914eb943.svg",
-                      "topRow": 4,
-                      "bottomRow": 8,
+                      "topRow": 8,
+                      "bottomRow": 12,
                       "parentRowSpace": 10,
                       "type": "RATE_WIDGET",
                       "maxCount": 5,
@@ -715,8 +716,12 @@
                       "tooltips": "[\n  \"Terrible\",\n  \"Bad\",\n  \"Neutral\",\n  \"Good\",\n  \"Great\"\n]"
                     },
                     {
-                      "widgetName": "Checkbox1",
-                      "dynamicPropertyPathList": [],
+                      "widgetName": "is_an_npc",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "defaultCheckedState"
+                        }
+                      ],
                       "displayName": "Checkbox",
                       "iconSVG": "/static/media/icon.aaab032b.svg",
                       "topRow": 0,
@@ -729,7 +734,11 @@
                       "parentColumnSpace": 6.84375,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 28,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultCheckedState"
+                        }
+                      ],
                       "isDisabled": false,
                       "key": "c4czbi7qvn",
                       "isRequired": false,
@@ -741,7 +750,44 @@
                       "parentId": "95ctjeuyap",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "defaultCheckedState": false
+                      "defaultCheckedState": "{{get_one_random_monster.data[0].is_npc}}"
+                    },
+                    {
+                      "widgetName": "npc_has_been_seen",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "defaultCheckedState"
+                        }
+                      ],
+                      "displayName": "Checkbox",
+                      "iconSVG": "/static/media/icon.aaab032b.svg",
+                      "topRow": 4,
+                      "bottomRow": 8,
+                      "parentRowSpace": 10,
+                      "type": "CHECKBOX_WIDGET",
+                      "alignWidget": "LEFT",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.53125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 28,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultCheckedState"
+                        }
+                      ],
+                      "isDisabled": false,
+                      "key": "tqf714l1tc",
+                      "isRequired": false,
+                      "rightColumn": 64,
+                      "widgetId": "1fjwtvtly6",
+                      "isVisible": true,
+                      "label": "NPC has been seen",
+                      "version": 1,
+                      "parentId": "95ctjeuyap",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "defaultCheckedState": "{{get_one_random_monster.data[0].npc_has_been_seen}}"
                     }
                   ],
                   "key": "nj1gmz0pqe"
@@ -973,40 +1019,7 @@
             }
           ]
         },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Grader_all_environments",
-              "name": "all_environments",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Grader_get_one_random_monster",
-              "name": "get_one_random_monster",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Grader_get_monster_image",
-              "name": "get_monster_image",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "get_one_random_monster.data[0].monster_id"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
+        "layoutOnLoadActions": [],
         "widgetNames": [
           "Button2",
           "Button4",
@@ -1014,7 +1027,6 @@
           "Canvas2",
           "Canvas3",
           "Canvas4",
-          "Checkbox1",
           "DDB_description",
           "DDB_description_modal",
           "Divider1",
@@ -1036,9 +1048,11 @@
           "Text4",
           "Title",
           "info_container",
-          "menu"
+          "is_an_npc",
+          "menu",
+          "npc_has_been_seen"
         ],
-        "validOnPageLoadActions": true,
+        "validOnPageLoadActions": false,
         "id": "Grader",
         "deleted": false,
         "policies": [],

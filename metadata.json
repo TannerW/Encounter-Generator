@@ -5,6 +5,10 @@
   "publishedDefaultPageName": "Grader",
   "unpublishedDefaultPageName": "Grader",
   "invisibleActionFields": {
+    "Grader_submit": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Grader_get_one_random_monster": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
