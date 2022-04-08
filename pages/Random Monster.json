@@ -221,20 +221,6 @@
                       "isDisabled": false,
                       "index": 1,
                       "iconName": "media"
-                    },
-                    "menuItem3": {
-                      "label": "Delete",
-                      "iconName": "trash",
-                      "iconColor": "#FFFFFF",
-                      "iconAlign": "right",
-                      "textColor": "#FFFFFF",
-                      "backgroundColor": "#DD4B34",
-                      "id": "menuItem3",
-                      "widgetId": "",
-                      "onClick": "",
-                      "isVisible": true,
-                      "isDisabled": false,
-                      "index": 2
                     }
                   }
                 }
