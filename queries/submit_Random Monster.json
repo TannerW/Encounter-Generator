@@ -12,12 +12,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Grader",
+    "pageId": "Random Monster",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE public.\"monsters\" SET\n\t\t\"is_npc\" = {{is_an_npc.isChecked}},\n\t\t\"npc_has_been_seen\" = {{npc_has_been_seen.isChecked}}\n  WHERE monster_id = {{get_one_random_monster.data[0].monster_id}}; -- Specify a valid condition here. Removing the condition may update every row in the table!"
+      "body": "UPDATE public.\"monsters\" SET\n\t\t\"is_npc\" = {{is_an_npc.isChecked}},\n\t\t\"npc_has_been_seen\" = {{npc_has_been_seen.isChecked}},\n\t\t\"ddb_description\" = '{{DDB_description.text}}'\n  WHERE monster_id = {{get_one_random_monster.data[0].monster_id}}; -- Specify a valid condition here. Removing the condition may update every row in the table!"
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -29,6 +29,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
+      "DDB_description.text",
       "get_one_random_monster.data[0].monster_id",
       "is_an_npc.isChecked",
       "npc_has_been_seen.isChecked"
@@ -38,7 +39,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Grader_submit",
+  "id": "Random Monster_submit",
   "deleted": false,
   "gitSyncId": "623d0077c45d83022e3fd3ff_6250450fd47d49666c37ced8"
 }

@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Grader",
-    "slug": "grader",
+    "name": "Random Monster",
+    "slug": "random-monster",
     "layouts": [
       {
         "viewMode": false,
@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 800,
+          "bottomRow": 880,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -144,7 +144,14 @@
               "boxShadow": "NONE",
               "widgetName": "menu",
               "isCanvas": false,
-              "dynamicPropertyPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "groupButtons.groupButton1.isVisible"
+                },
+                {
+                  "key": "groupButtons.groupButton2.isVisible"
+                }
+              ],
               "displayName": "Button Group",
               "iconSVG": "/static/media/icon.d6773218.svg",
               "topRow": 36,
@@ -159,7 +166,7 @@
                   "buttonColor": "#DD4B34",
                   "buttonType": "SIMPLE",
                   "placement": "CENTER",
-                  "isVisible": true,
+                  "isVisible": "{{get_one_random_monster.data[0].statblock_parse.url !=\"\"}}",
                   "isDisabled": false,
                   "index": 0,
                   "menuItems": {},
@@ -173,7 +180,7 @@
                   "buttonType": "SIMPLE",
                   "placement": "CENTER",
                   "widgetId": "",
-                  "isVisible": true,
+                  "isVisible": "{{get_one_random_monster.data[0].statblock_parse != null}}",
                   "isDisabled": false,
                   "index": 1,
                   "menuItems": {},
@@ -193,7 +200,7 @@
                   "index": 2,
                   "menuItems": {
                     "menuItem1": {
-                      "label": "Enter DDB Flavor Description",
+                      "label": "DDB Flavor Description",
                       "backgroundColor": "#FFFFFF",
                       "id": "menuItem1",
                       "widgetId": "",
@@ -251,7 +258,14 @@
                 }
               ],
               "leftColumn": 0,
-              "dynamicBindingPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "groupButtons.groupButton1.isVisible"
+                },
+                {
+                  "key": "groupButtons.groupButton2.isVisible"
+                }
+              ],
               "key": "jr569ix5j9",
               "orientation": "horizontal",
               "rightColumn": 64,
@@ -433,7 +447,7 @@
                   "displayName": "Canvas",
                   "widgetId": "n4xpcw3u0q",
                   "topRow": 0,
-                  "bottomRow": 390,
+                  "bottomRow": 670,
                   "parentRowSpace": 1,
                   "isVisible": true,
                   "type": "CANVAS_WIDGET",
@@ -442,7 +456,7 @@
                   "hideCard": true,
                   "parentId": "v7i4q5xh73",
                   "shouldScrollContents": false,
-                  "minHeight": 386,
+                  "minHeight": 668,
                   "renderMode": "CANVAS",
                   "isLoading": false,
                   "parentColumnSpace": 1,
@@ -489,7 +503,7 @@
                       "dynamicBindingPathList": [],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Enter DDB Flavor Description",
+                      "text": "DDB Flavor Description",
                       "key": "2p4jbgkjp5",
                       "rightColumn": 55,
                       "textAlign": "LEFT",
@@ -510,8 +524,8 @@
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
-                      "topRow": 33,
-                      "bottomRow": 37,
+                      "topRow": 61,
+                      "bottomRow": 65,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -539,13 +553,19 @@
                       "displayName": "Rich Text Editor",
                       "iconSVG": "/static/media/icon.b35e139c.svg",
                       "topRow": 5,
-                      "bottomRow": 33,
+                      "bottomRow": 60,
                       "parentRowSpace": 10,
                       "type": "RICH_TEXT_EDITOR_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 6.4921875,
-                      "leftColumn": 1,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultText"
+                        }
+                      ],
                       "inputType": "html",
                       "isDisabled": false,
                       "key": "11mlvfeu20",
@@ -558,7 +578,7 @@
                       "parentId": "n4xpcw3u0q",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "defaultText": "This is the initial <b>content</b> of the editor"
+                      "defaultText": "{{get_one_random_monster.data[0].ddb_description}}"
                     }
                   ],
                   "isDisabled": false,
@@ -566,7 +586,7 @@
                 }
               ],
               "key": "5uif9105ew",
-              "height": 386,
+              "height": 668,
               "rightColumn": 0,
               "detachFromLayout": true,
               "widgetId": "v7i4q5xh73",
@@ -1053,7 +1073,7 @@
           "npc_has_been_seen"
         ],
         "validOnPageLoadActions": false,
-        "id": "Grader",
+        "id": "Random Monster",
         "deleted": false,
         "policies": [],
         "userPermissions": []

@@ -2,16 +2,20 @@
   "fileFormatVersion": 1,
   "clientSchemaVersion": 1,
   "serverSchemaVersion": 2,
-  "publishedDefaultPageName": "Grader",
-  "unpublishedDefaultPageName": "Grader",
+  "publishedDefaultPageName": "Random Monster",
+  "unpublishedDefaultPageName": "Random Monster",
   "invisibleActionFields": {
-    "Grader_submit": {
+    "Random Monster_get_one_random_monster": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Random Monster_get_monster_image": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Grader_get_one_random_monster": {
-      "unpublishedUserSetOnLoad": true,
-      "publishedUserSetOnLoad": true
+    "Random Monster_CreateFile": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
     },
     "Dnd-monster-app-images_DeleteFile": {
       "unpublishedUserSetOnLoad": false,
@@ -29,6 +33,18 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Random Monster_all_environments": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Random Monster_myFun2": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Random Monster_myFun1": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Analysis Analytics_num_npcs_seen": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -37,21 +53,13 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Grader_CreateFile": {
+    "Random Monster_submit": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
     "Dnd-monster-app-images_ListFiles": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
-    },
-    "Grader_get_monster_image": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Grader_all_environments": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
     },
     "Dnd-monster-app-images_UpdateFile": {
       "unpublishedUserSetOnLoad": false,

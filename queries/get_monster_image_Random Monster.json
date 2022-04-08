@@ -12,7 +12,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Grader",
+    "pageId": "Random Monster",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -58,7 +58,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Grader_get_monster_image",
+  "id": "Random Monster_get_monster_image",
   "deleted": false,
   "gitSyncId": "623d0077c45d83022e3fd3ff_624f88b48cd00a3f6be67156"
 }
