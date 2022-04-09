@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "settings_helper",
+    "pageId": "Random Monster",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tinit: () => {\n\t\tstoreValue(\"randomness_control_default\", []);\n\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t},\n\t\n\trandomness_control_onSelect: () => {\n\t\tvar unique_select = rand_control_switch_group.selectedValues.filter(function(val) {\n\t\t\treturn appsmith.store.randomness_control_current.indexOf(val) == -1;\n\t\t});\n\t\tstoreValue(\"randomness_control_current\", unique_select);\n\t\tresetWidget(\"rand_control_switch_group\", true);\n\t}\n}",
+    "variables": []
+  },
+  "id": "Random Monster_settings_helper",
+  "deleted": false,
+  "gitSyncId": "623d0077c45d83022e3fd3ff_6251b4859f8fa45475aecc61"
+}

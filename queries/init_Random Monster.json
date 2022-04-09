@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "init",
-    "fullyQualifiedName": "desc_on_ddb_helper.init",
+    "fullyQualifiedName": "settings_helper.init",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,14 +14,14 @@
       "userPermissions": []
     },
     "pageId": "Random Monster",
-    "collectionId": "Random Monster_desc_on_ddb_helper",
+    "collectionId": "Random Monster_settings_helper",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (get_one_random_monster.data[0].ddb_description == undefined || get_one_random_monster.data[0].ddb_description == '') {\n\t\t\tif (get_one_random_monster.data[0].has_description_on_ddb == undefined) {\n\t\t\t\tstoreValue(\"desc_on_ddb\", undefined);\n\t\t\t} else {\n\t\t\t\tstoreValue(\"desc_on_ddb\", get_one_random_monster.data[0].has_description_on_ddb);\n\t\t\t}\n\t\t} else {\n\t\t\tstoreValue(\"desc_on_ddb\", true);\n\t\t}\n\t\treturn 0;\n\t}",
+      "body": "() => {\n\t\tstoreValue(\"randomness_control_default\", []);\n\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (get_one_random_monster.data[0].ddb_description == undefined || get_one_random_monster.data[0].ddb_description == '') {\n\t\t\tif (get_one_random_monster.data[0].has_description_on_ddb == undefined) {\n\t\t\t\tstoreValue(\"desc_on_ddb\", undefined);\n\t\t\t} else {\n\t\t\t\tstoreValue(\"desc_on_ddb\", get_one_random_monster.data[0].has_description_on_ddb);\n\t\t\t}\n\t\t} else {\n\t\t\tstoreValue(\"desc_on_ddb\", true);\n\t\t}\n\t\treturn 0;\n\t}"
+      "() => {\n\t\tstoreValue(\"randomness_control_default\", []);\n\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
@@ -42,5 +42,5 @@
   },
   "id": "Random Monster_init",
   "deleted": false,
-  "gitSyncId": "623d0077c45d83022e3fd3ff_62509889d47d49666c37d114"
+  "gitSyncId": "623d0077c45d83022e3fd3ff_6251b4e69f8fa45475aecc63"
 }
