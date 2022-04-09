@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 790,
+          "bottomRow": 850,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -87,7 +87,7 @@
               "truncateButtonColor": "#FFC13D",
               "text": "{{get_one_random_monster.data[0].name}}",
               "key": "2p4jbgkjp5",
-              "rightColumn": 33,
+              "rightColumn": 58,
               "textAlign": "LEFT",
               "widgetId": "mu6x43r3gu",
               "isVisible": true,
@@ -1109,8 +1109,8 @@
               ],
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca02633.svg",
-              "topRow": 0,
-              "bottomRow": 6,
+              "topRow": 12,
+              "bottomRow": 18,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -1121,7 +1121,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 34,
+              "leftColumn": 37,
               "dynamicBindingPathList": [
                 {
                   "key": "isVisible"
@@ -1130,7 +1130,7 @@
               "text": "LOAD",
               "isDisabled": false,
               "key": "3mm4h1rn99",
-              "rightColumn": 58,
+              "rightColumn": 61,
               "isDefaultClickDisabled": true,
               "widgetId": "wtv9j42bv8",
               "isVisible": "{{!get_one_random_monster.responseMeta.isExecutionSuccess}}",
