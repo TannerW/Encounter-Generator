@@ -102,7 +102,7 @@
             },
             {
               "widgetName": "Submit",
-              "onClick": "{{submit.run(() => {\n\t\tget_one_random_monster.run(() => {\n\t\t\tget_monster_image.run();\n\t\t\tget_monster_custom_image.run();\nresetWidget(\"DDB_description_modal\",true);\nresetWidget(\"Import_Image\",true);\nresetWidget(\"info_container\",true);\ndesc_on_ddb_helper.init()\n\t\t},() => {})\n\t\n},\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t () => {})\n\n}}",
+              "onClick": "{{submit.run(() => {\n\t\tget_one_random_monster.run(() => {\n\t\t\tget_monster_image.run();\n\t\t\tget_monster_custom_image.run();\n\t\t\tresetWidget(\"DDB_description_modal\",true);\n\t\t\tresetWidget(\"Import_Image\",true);\n\t\t\tresetWidget(\"info_container\",true);\n\t\t\tdesc_on_ddb_helper.init()\n\t\t},() => {})\n\t},\n\t() => {})\n}}",
               "buttonColor": "#03B365",
               "dynamicPropertyPathList": [
                 {
@@ -1570,7 +1570,7 @@
                           "widgetName": "Canvas8",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 390,
+                          "bottomRow": 420,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": true,
@@ -1692,7 +1692,7 @@
                     },
                     {
                       "widgetName": "Setting_reset_button",
-                      "onClick": "{{settings_helper.init();\nresetWidget(\"setting_tabs\",true)}}",
+                      "onClick": "{{settings_helper.init()}}",
                       "buttonColor": "#F86A2B",
                       "dynamicPropertyPathList": [
                         {

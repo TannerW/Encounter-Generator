@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tstoreValue(\"randomness_control_default\", [\"\"]);\n\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t}",
+      "body": "() => {\n\t\tstoreValue(\"randomness_control_default\", [\"\"]);\n\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t\tresetWidget(\"rand_control_switch_group\", true);\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tstoreValue(\"randomness_control_default\", [\"\"]);\n\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t}"
+      "() => {\n\t\tstoreValue(\"randomness_control_default\", [\"\"]);\n\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t\tresetWidget(\"rand_control_switch_group\", true);\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

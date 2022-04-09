@@ -19,9 +19,9 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tif (rand_control_switch_group.selectedValues.length >= 1) {\n\t\t\tvar unique_select = rand_control_switch_group.selectedValues.filter(function(val) {\n\t\t\t\treturn appsmith.store.randomness_control_current.indexOf(val) == -1;\n\t\t\t});\n\t\t\tif (unique_select.length == 1) {\n\t\t\t\tstoreValue(\"randomness_control_current\", unique_select);\n\t\t\t} else {\n\t\t\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t\t\t}\n\t\t\tresetWidget(\"rand_control_switch_group\", true);\n\t\t} else {\n\t\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t\t\tresetWidget(\"rand_control_switch_group\", true);\n\t\t}\n\t}",
+      "body": "() => {\n\t\tif (rand_control_switch_group.selectedValues.length >= 1) {\n\t\t\tif (appsmith.store.randomness_control_current[0] != \"\"){\n\t\t\t\tvar unique_select = rand_control_switch_group.selectedValues.filter(function(val) {\n\t\t\t\t\treturn appsmith.store.randomness_control_current.indexOf(val) == -1;\n\t\t\t\t});\n\t\t\t\tif (unique_select.length == 1) {\n\t\t\t\t\tstoreValue(\"randomness_control_current\", unique_select);\n\t\t\t\t\tresetWidget(\"rand_control_switch_group\", true);\n\t\t\t\t} else {\n\t\t\t\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t\t\t\t\tresetWidget(\"rand_control_switch_group\", true);\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tstoreValue(\"randomness_control_current\", rand_control_switch_group.selectedValues);\n\t\t\t\tresetWidget(\"rand_control_switch_group\", true);\n\t\t\t}\n\t\t} else {\n\t\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t\t\tresetWidget(\"rand_control_switch_group\", true);\n\t\t}\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tif (rand_control_switch_group.selectedValues.length >= 1) {\n\t\t\tvar unique_select = rand_control_switch_group.selectedValues.filter(function(val) {\n\t\t\t\treturn appsmith.store.randomness_control_current.indexOf(val) == -1;\n\t\t\t});\n\t\t\tif (unique_select.length == 1) {\n\t\t\t\tstoreValue(\"randomness_control_current\", unique_select);\n\t\t\t} else {\n\t\t\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t\t\t}\n\t\t\tresetWidget(\"rand_control_switch_group\", true);\n\t\t} else {\n\t\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t\t\tresetWidget(\"rand_control_switch_group\", true);\n\t\t}\n\t}"
+      "() => {\n\t\tif (rand_control_switch_group.selectedValues.length >= 1) {\n\t\t\tif (appsmith.store.randomness_control_current[0] != \"\"){\n\t\t\t\tvar unique_select = rand_control_switch_group.selectedValues.filter(function(val) {\n\t\t\t\t\treturn appsmith.store.randomness_control_current.indexOf(val) == -1;\n\t\t\t\t});\n\t\t\t\tif (unique_select.length == 1) {\n\t\t\t\t\tstoreValue(\"randomness_control_current\", unique_select);\n\t\t\t\t\tresetWidget(\"rand_control_switch_group\", true);\n\t\t\t\t} else {\n\t\t\t\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t\t\t\t\tresetWidget(\"rand_control_switch_group\", true);\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tstoreValue(\"randomness_control_current\", rand_control_switch_group.selectedValues);\n\t\t\t\tresetWidget(\"rand_control_switch_group\", true);\n\t\t\t}\n\t\t} else {\n\t\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t\t\tresetWidget(\"rand_control_switch_group\", true);\n\t\t}\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
