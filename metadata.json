@@ -77,6 +77,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Analysis Analytics_count_environments": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Random Monster_enable_desc_menu_option": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false

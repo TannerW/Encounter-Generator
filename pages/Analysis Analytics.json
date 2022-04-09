@@ -8,12 +8,12 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1936,
+          "rightColumn": 450,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1230,
+          "bottomRow": 1560,
           "containerStyle": "none",
           "snapRows": 79,
           "parentRowSpace": 1,
@@ -425,7 +425,7 @@
             },
             {
               "setAdaptiveYMin": false,
-              "widgetName": "Chart1",
+              "widgetName": "graph_count_cr",
               "allowScroll": false,
               "displayName": "Chart",
               "iconSVG": "/static/media/icon.6adbe31e.svg",
@@ -488,7 +488,7 @@
               "chartType": "COLUMN_CHART"
             },
             {
-              "widgetName": "Chart2",
+              "widgetName": "graph_count_subtype",
               "allowScroll": false,
               "displayName": "Chart",
               "iconSVG": "/static/media/icon.6adbe31e.svg",
@@ -549,6 +549,69 @@
               "chartName": "Monster Subtype",
               "xAxisName": "Monster Subtype",
               "chartType": "COLUMN_CHART"
+            },
+            {
+              "widgetName": "graph_count_envs",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 122,
+              "bottomRow": 154,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "9h9k8r1jk1": {
+                  "seriesName": "Environments",
+                  "data": "{{count_environments.data.map( (obj) =>{ return  {'x': obj.unnest, 'y': obj.count } })}}"
+                }
+              },
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.9h9k8r1jk1.data"
+                }
+              ],
+              "leftColumn": 0,
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "dukfnmnk4e",
+              "rightColumn": 64,
+              "widgetId": "20eoc6hxid",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "slant",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "Quantity",
+              "chartName": "Environments",
+              "xAxisName": "Environments",
+              "chartType": "COLUMN_CHART"
             }
           ]
         },
@@ -599,6 +662,14 @@
           ],
           [
             {
+              "id": "Analysis Analytics_count_environments",
+              "name": "count_environments",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Analysis Analytics_count_types",
               "name": "count_types",
               "confirmBeforeExecute": false,
@@ -636,13 +707,14 @@
         ],
         "widgetNames": [
           "CR",
-          "Chart1",
-          "Chart2",
           "Divider1",
           "Divider2",
           "MainContainer",
           "Text1",
           "bar_percent_avrae_parsed",
+          "graph_count_cr",
+          "graph_count_envs",
+          "graph_count_subtype",
           "num_environment",
           "num_monsters",
           "num_of_ddb_descriptions",
