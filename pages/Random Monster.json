@@ -13,26 +13,26 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 880,
+          "bottomRow": 810,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 53,
-          "minHeight": 860,
+          "minHeight": 800,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
           "children": [
             {
               "widgetName": "Monster_Image",
-              "onClick": "{{download(get_monster_image.data[0].signedUrl,get_monster_image.data[0].fileName,'image/png')}}",
+              "onClick": "{{showModal('Pop_out_monster_image')}}",
               "dynamicPropertyPathList": [],
               "displayName": "Image",
               "iconSVG": "/static/media/icon.52d8fb96.svg",
-              "topRow": 5,
-              "bottomRow": 36,
+              "topRow": 7,
+              "bottomRow": 26,
               "parentRowSpace": 10,
               "type": "IMAGE_WIDGET",
               "hideCard": false,
@@ -53,7 +53,7 @@
               "defaultImage": "https://assets.appsmith.com/widgets/default.png",
               "key": "y4b296znfl",
               "image": "{{(get_monster_image.data[0] != undefined) ? get_monster_image.data[0].signedUrl : get_monster_custom_image.data[0].signedUrl}}",
-              "rightColumn": 64,
+              "rightColumn": 33,
               "objectFit": "contain",
               "widgetId": "5spyg7x6nn",
               "isVisible": true,
@@ -61,8 +61,8 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "maxZoomLevel": 8,
-              "enableDownload": false,
+              "maxZoomLevel": 1,
+              "enableDownload": true,
               "enableRotation": false
             },
             {
@@ -70,7 +70,7 @@
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
               "topRow": 0,
-              "bottomRow": 5,
+              "bottomRow": 7,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -87,7 +87,7 @@
               "truncateButtonColor": "#FFC13D",
               "text": "{{get_one_random_monster.data[0].name}}",
               "key": "2p4jbgkjp5",
-              "rightColumn": 64,
+              "rightColumn": 33,
               "textAlign": "LEFT",
               "widgetId": "mu6x43r3gu",
               "isVisible": true,
@@ -123,7 +123,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 53,
+              "leftColumn": 45,
               "dynamicBindingPathList": [],
               "text": "Submit",
               "isDisabled": false,
@@ -149,10 +149,16 @@
                   "key": "groupButtons.groupButton1.isVisible"
                 },
                 {
-                  "key": "groupButtons.groupButton2.isVisible"
+                  "key": "groupButtons.groupButton3.menuItems.menuItemlkiy35ojav.isVisible"
                 },
                 {
-                  "key": "groupButtons.groupButton3.menuItems.menuItem1.isVisible"
+                  "key": "groupButtons.groupButtonfrmvkh98ys.isVisible"
+                },
+                {
+                  "key": "groupButtons.groupButtonx3z1aq6h7v.isVisible"
+                },
+                {
+                  "key": "groupButtons.groupButtonfrmvkh98ys.onClick"
                 }
               ],
               "displayName": "Button Group",
@@ -175,20 +181,33 @@
                   "menuItems": {},
                   "onClick": "{{navigateTo(get_one_random_monster.data[0].statblock_parse.url, {},'NEW_WINDOW')}}"
                 },
-                "groupButton2": {
-                  "label": "Avrae JSON",
-                  "iconName": "array",
-                  "id": "groupButton2",
-                  "buttonColor": "#3366FF",
-                  "buttonType": "SIMPLE",
-                  "placement": "CENTER",
-                  "widgetId": "",
-                  "isVisible": "{{get_one_random_monster.data[0].statblock_parse != null}}",
-                  "isDisabled": false,
-                  "index": 1,
+                "groupButtonx3z1aq6h7v": {
+                  "id": "groupButtonx3z1aq6h7v",
+                  "label": "View DDB Description",
                   "menuItems": {},
-                  "iconAlign": "left",
-                  "onClick": "{{showModal('JSON_modal')}}"
+                  "buttonType": "SIMPLE",
+                  "buttonColor": "#3366FF",
+                  "placement": "CENTER",
+                  "widgetId": "snossmoi1q",
+                  "isDisabled": false,
+                  "isVisible": "{{get_one_random_monster.data[0].statblock_parse.url !=\"\" && desc_on_ddb_helper.enable_desc_menu_option() && get_one_random_monster.data[0].ddb_description != '' && get_one_random_monster.data[0].ddb_description != undefined}}",
+                  "index": 1,
+                  "iconName": "align-left",
+                  "onClick": "{{showModal('DDB_description_modal')}}"
+                },
+                "groupButtonfrmvkh98ys": {
+                  "id": "groupButtonfrmvkh98ys",
+                  "label": "Add DDB Description",
+                  "menuItems": {},
+                  "buttonType": "SIMPLE",
+                  "buttonColor": "#F86A2B",
+                  "placement": "CENTER",
+                  "widgetId": "dazkubizvu",
+                  "isDisabled": false,
+                  "isVisible": "{{\nget_one_random_monster.data[0].statblock_parse.url !=\"\" && desc_on_ddb_helper.enable_desc_menu_option() && (get_one_random_monster.data[0].ddb_description == '' || get_one_random_monster.data[0].ddb_description == undefined) \n}}",
+                  "index": 2,
+                  "onClick": "{{navigateTo(get_one_random_monster.data[0].statblock_parse.url, {},'NEW_WINDOW');\nshowModal('DDB_description_modal')}}",
+                  "iconName": "new-text-box"
                 },
                 "groupButton3": {
                   "label": "More",
@@ -200,30 +219,32 @@
                   "widgetId": "",
                   "isVisible": true,
                   "isDisabled": false,
-                  "index": 2,
+                  "index": 3,
                   "menuItems": {
-                    "menuItem1": {
-                      "label": "DDB Flavor Description",
-                      "backgroundColor": "#FFFFFF",
-                      "id": "menuItem1",
-                      "widgetId": "",
-                      "onClick": "{{showModal('DDB_description_modal')}}",
-                      "isVisible": "{{\ndesc_on_ddb_helper.enable_desc_menu_option()\n}}",
-                      "isDisabled": false,
-                      "index": 0,
-                      "iconName": "new-text-box",
-                      "iconColor": ""
-                    },
                     "menuItem2": {
                       "label": "Import Image",
-                      "backgroundColor": "#FFFFFF",
+                      "backgroundColor": "#FFC13D",
                       "id": "menuItem2",
                       "widgetId": "",
                       "onClick": "{{showModal('Import_Image')}}",
                       "isVisible": true,
                       "isDisabled": false,
-                      "index": 1,
-                      "iconName": "media"
+                      "index": 0,
+                      "iconName": "media",
+                      "iconColor": "#231F20"
+                    },
+                    "menuItemlkiy35ojav": {
+                      "id": "menuItemlkiy35ojav",
+                      "label": "Avrae JSON",
+                      "widgetId": "cxrdhxm7fc",
+                      "isDisabled": false,
+                      "isVisible": "{{get_one_random_monster.data[0].statblock_parse != null}}",
+                      "onClick": "{{showModal('JSON_modal')}}",
+                      "iconName": "array",
+                      "backgroundColor": "#3366FF",
+                      "textColor": "#FFFFFF",
+                      "iconColor": "#FFFFFF",
+                      "index": 1
                     }
                   }
                 }
@@ -237,25 +258,31 @@
                   "key": "groupButtons.groupButton1.onClick"
                 },
                 {
-                  "key": "groupButtons.groupButton2.onClick"
-                },
-                {
-                  "key": "groupButtons.groupButton3.menuItems.menuItem1.onClick"
-                },
-                {
                   "key": "groupButtons.groupButton3.menuItems.menuItem2.onClick"
+                },
+                {
+                  "key": "groupButtons.groupButton3.menuItems.menuItemlkiy35ojav.onClick"
+                },
+                {
+                  "key": "groupButtons.groupButtonfrmvkh98ys.onClick"
+                },
+                {
+                  "key": "groupButtons.groupButtonx3z1aq6h7v.onClick"
                 }
               ],
               "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
-                  "key": "groupButtons.groupButton2.isVisible"
-                },
-                {
                   "key": "groupButtons.groupButton1.isVisible"
                 },
                 {
-                  "key": "groupButtons.groupButton3.menuItems.menuItem1.isVisible"
+                  "key": "groupButtons.groupButton3.menuItems.menuItemlkiy35ojav.isVisible"
+                },
+                {
+                  "key": "groupButtons.groupButtonfrmvkh98ys.isVisible"
+                },
+                {
+                  "key": "groupButtons.groupButtonx3z1aq6h7v.isVisible"
                 }
               ],
               "key": "jr569ix5j9",
@@ -1276,6 +1303,122 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "width": 456
+            },
+            {
+              "widgetName": "Pop_out_monster_image",
+              "isCanvas": true,
+              "displayName": "Modal",
+              "iconSVG": "/static/media/icon.4975978e.svg",
+              "topRow": 0,
+              "bottomRow": 0,
+              "parentRowSpace": 1,
+              "type": "MODAL_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": true,
+              "animateLoading": true,
+              "parentColumnSpace": 1,
+              "leftColumn": 0,
+              "children": [
+                {
+                  "widgetName": "Canvas6",
+                  "rightColumn": 0,
+                  "detachFromLayout": true,
+                  "displayName": "Canvas",
+                  "widgetId": "4ii1grc85y",
+                  "topRow": 0,
+                  "bottomRow": 420,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "version": 1,
+                  "hideCard": true,
+                  "parentId": "dvabf3cshc",
+                  "shouldScrollContents": false,
+                  "minHeight": 426,
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [
+                    {
+                      "boxShadow": "NONE",
+                      "widgetName": "IconButton4",
+                      "onClick": "{{closeModal('Pop_out_monster_image')}}",
+                      "buttonColor": "#2E3D49",
+                      "displayName": "Icon Button",
+                      "iconSVG": "/static/media/icon.1a0c634a.svg",
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "type": "ICON_BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "leftColumn": 56,
+                      "iconSize": 24,
+                      "isDisabled": false,
+                      "key": "rxhz1ag75o",
+                      "rightColumn": 64,
+                      "iconName": "cross",
+                      "widgetId": "5naw8yh40n",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "4ii1grc85y",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "SHARP",
+                      "buttonVariant": "TERTIARY"
+                    },
+                    {
+                      "widgetName": "Image2",
+                      "displayName": "Image",
+                      "iconSVG": "/static/media/icon.52d8fb96.svg",
+                      "topRow": 0,
+                      "bottomRow": 40,
+                      "parentRowSpace": 10,
+                      "type": "IMAGE_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.4921875,
+                      "dynamicTriggerPathList": [],
+                      "imageShape": "RECTANGLE",
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "image"
+                        }
+                      ],
+                      "defaultImage": "https://assets.appsmith.com/widgets/default.png",
+                      "key": "fxz2s7qrns",
+                      "image": "{{(get_monster_image.data[0] != undefined) ? get_monster_image.data[0].signedUrl : get_monster_custom_image.data[0].signedUrl}}",
+                      "rightColumn": 56,
+                      "objectFit": "contain",
+                      "widgetId": "wvw6231ia4",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "4ii1grc85y",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "maxZoomLevel": 8,
+                      "enableDownload": false,
+                      "enableRotation": false
+                    }
+                  ],
+                  "isDisabled": false,
+                  "key": "7ywnwtnlor"
+                }
+              ],
+              "key": "wpruo4q2t5",
+              "height": 426,
+              "rightColumn": 0,
+              "detachFromLayout": true,
+              "widgetId": "dvabf3cshc",
+              "canOutsideClickClose": true,
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "width": 427.5
             }
           ]
         },
@@ -1292,6 +1435,7 @@
           "Canvas3",
           "Canvas4",
           "Canvas5",
+          "Canvas6",
           "DDB_description",
           "DDB_description_modal",
           "Divider1",
@@ -1299,13 +1443,16 @@
           "IconButton1",
           "IconButton2",
           "IconButton3",
+          "IconButton4",
           "Image1",
+          "Image2",
           "Import_Image",
           "Import_custom_image",
           "JSON_modal",
           "MainContainer",
           "Modal1",
           "Monster_Image",
+          "Pop_out_monster_image",
           "Submit",
           "Text1",
           "Text2",
