@@ -8,12 +8,12 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 450,
+          "rightColumn": 1936,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 850,
+          "bottomRow": 1230,
           "containerStyle": "none",
           "snapRows": 79,
           "parentRowSpace": 1,
@@ -357,10 +357,212 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "fontSize": "PARAGRAPH"
+            },
+            {
+              "setAdaptiveYMin": true,
+              "widgetName": "CR",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 24,
+              "bottomRow": 55,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "7cqcnod5n4": {
+                  "seriesName": "CR",
+                  "data": "{{ count_CRs.data.map((row) => { \n      return { x: row.cr, y: row.count } \n   }) \n}}"
+                }
+              },
+              "animateLoading": true,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.7cqcnod5n4.data"
+                }
+              ],
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "dukfnmnk4e",
+              "rightColumn": 64,
+              "widgetId": "ntshvyp843",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "slant",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "Quantity",
+              "chartName": "CR",
+              "xAxisName": "CR",
+              "chartType": "COLUMN_CHART"
+            },
+            {
+              "setAdaptiveYMin": false,
+              "widgetName": "Chart1",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 56,
+              "bottomRow": 88,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "dedzaf7g7p": {
+                  "seriesName": "Type",
+                  "data": "{{count_types.data.map( (obj) =>{ return  {'x': obj.type, 'y': obj.count } })}}"
+                }
+              },
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.dedzaf7g7p.data"
+                }
+              ],
+              "leftColumn": 0,
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "dukfnmnk4e",
+              "rightColumn": 64,
+              "widgetId": "w9r0g22vme",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "slant",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "Quantity",
+              "chartName": "Monster Type",
+              "xAxisName": "Monster type",
+              "chartType": "COLUMN_CHART"
+            },
+            {
+              "widgetName": "Chart2",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 89,
+              "bottomRow": 121,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "960g8pf0y3": {
+                  "seriesName": "Subtype",
+                  "data": "{{count_subtypes.data.slice(0,count_subtypes.data.length-2).map( (obj) =>{ return  {'x': obj.subtype, 'y': obj.count } })}}"
+                }
+              },
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.960g8pf0y3.data"
+                }
+              ],
+              "leftColumn": 0,
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "dukfnmnk4e",
+              "rightColumn": 64,
+              "widgetId": "9xszq7ij4h",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "auto",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "Quantity",
+              "chartName": "Monster Subtype",
+              "xAxisName": "Monster Subtype",
+              "chartType": "COLUMN_CHART"
             }
           ]
         },
         "layoutOnLoadActions": [
+          [
+            {
+              "id": "Analysis Analytics_count_CRs",
+              "name": "count_CRs",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
           [
             {
               "id": "Analysis Analytics_num_environments",
@@ -397,6 +599,14 @@
           ],
           [
             {
+              "id": "Analysis Analytics_count_types",
+              "name": "count_types",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Analysis Analytics_num_total_monsters",
               "name": "num_total_monsters",
               "confirmBeforeExecute": false,
@@ -406,6 +616,14 @@
             }
           ],
           [
+            {
+              "id": "Analysis Analytics_count_subtypes",
+              "name": "count_subtypes",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Analysis Analytics_num_avrae_parsed",
               "name": "num_avrae_parsed",
@@ -417,6 +635,9 @@
           ]
         ],
         "widgetNames": [
+          "CR",
+          "Chart1",
+          "Chart2",
           "Divider1",
           "Divider2",
           "MainContainer",

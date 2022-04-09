@@ -17,10 +17,6 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Dnd-monster-app-images_DeleteFile": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Dnd-monster-app-images_CreateFile": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -33,21 +29,57 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Random Monster_init": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Analysis Analytics_num_monsters_with_ddb_desc": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Random Monster_enable_desc_menu_option": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
     "Random Monster_all_environments": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
+    },
+    "Dnd-monster-app-images_UpdateFile": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Dnd-monster-app-images_ReadFile": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Ellipsis Tag Resolver_get_an_ellipsis_monster": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
+    "Ellipsis Tag Resolver_num_of_ellipsis_monsters": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Ellipsis Tag Resolver_submit": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Ellipsis Tag Resolver_get_tags": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Analysis Analytics_count_subtypes": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Dnd-monster-app-images_DeleteFile": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Random Monster_init": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Analysis Analytics_count_types": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Random Monster_enable_desc_menu_option": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
     },
     "Random Monster_get_monster_custom_image": {
       "unpublishedUserSetOnLoad": false,
@@ -61,6 +93,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Ellipsis Tag Resolver_add_tag": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Analysis Analytics_num_environments": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -69,21 +105,21 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Analysis Analytics_count_CRs": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Random Monster_submit": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Ellipsis Tag Resolver_check_for_tag_ellipsis": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
     "Dnd-monster-app-images_ListFiles": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
-    },
-    "Dnd-monster-app-images_UpdateFile": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Dnd-monster-app-images_ReadFile": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
     },
     "Analysis Analytics_num_npcs": {
       "unpublishedUserSetOnLoad": false,
