@@ -16,11 +16,11 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 100000,
       "paginationType": "NONE",
-      "path": "{{(!!folder_name.text ? folder_name.text + \"/\" : \"\") + this.params.name}}",
+      "path": "{{get_one_random_monster.data[0].monster_id}}.png",
       "encodeParamsToggle": true,
-      "body": "{{FilePicker.files[this.params.fileIndex]}}",
+      "body": "{{Import_custom_image.files[Import_custom_image.files.length -1]}}",
       "formData": {
-        "bucket": "dnd-monster-app-images",
+        "bucket": "custom-dnd-monster-app-images",
         "read": {
           "usingBase64Encoding": "YES",
           "dataType": "YES",
@@ -42,14 +42,22 @@
       }
     },
     "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      },
+      {
+        "key": "path"
+      }
+    ],
     "isValid": true,
     "invalids": [
       "'Query timeout' field must be an integer between 0 and 60000"
     ],
     "messages": [],
     "jsonPathKeys": [
-      "(!!folder_name.text ? folder_name.text + \"/\" : \"\") + this.params.name",
-      "FilePicker.files[this.params.fileIndex]"
+      "Import_custom_image.files[Import_custom_image.files.length -1]",
+      "get_one_random_monster.data[0].monster_id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

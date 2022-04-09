@@ -49,6 +49,10 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
+    "Random Monster_get_monster_custom_image": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "Random Monster_generate_set_ddb_description": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
