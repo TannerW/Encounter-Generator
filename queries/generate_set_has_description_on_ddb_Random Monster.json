@@ -40,7 +40,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Random Monster_generate_set_has_description_on_ddb",
+  "id": "Random Monster_desc_on_ddb_helper.generate_set_has_description_on_ddb",
   "deleted": false,
   "gitSyncId": "623d0077c45d83022e3fd3ff_62509e05d47d49666c37d118"
 }

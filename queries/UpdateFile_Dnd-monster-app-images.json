@@ -16,36 +16,40 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "{{update_file_name.text}}",
       "encodeParamsToggle": true,
-      "body": "{\n\t\"data\": \"{{update_file_picker.files.length ? update_file_picker.files[0].data : \"\" }}\"\n}",
       "formData": {
-        "bucket": "dnd-monster-app-images",
-        "read": {
-          "usingBase64Encoding": "YES",
-          "dataType": "YES",
-          "expiry": "5"
+        "body": {
+          "data": "{\n\t\"data\": \"{{update_file_picker.files.length ? update_file_picker.files[0].data : \"\" }}\"\n}",
+          "viewType": "component",
+          "componentData": "{\n\t\"data\": \"{{update_file_picker.files.length ? update_file_picker.files[0].data : \"\" }}\"\n}"
+        },
+        "bucket": {
+          "data": "dnd-monster-app-images",
+          "viewType": "component",
+          "componentData": "dnd-monster-app-images"
+        },
+        "command": {
+          "data": "UPLOAD_FILE_FROM_BODY",
+          "viewType": "component",
+          "componentData": "UPLOAD_FILE_FROM_BODY"
         },
         "create": {
-          "dataType": "YES",
-          "expiry": "5"
-        },
-        "list": {
-          "prefix": "",
-          "where": {
-            "children": [
-              {
-                "condition": "EQ"
-              }
-            ]
+          "dataType": {
+            "data": "YES",
+            "viewType": "component",
+            "componentData": "YES"
           },
-          "expiry": "5",
-          "signedUrl": "NO"
+          "expiry": {
+            "data": "5",
+            "viewType": "component",
+            "componentData": "5"
+          }
         },
-        "delete": {
-          "expiry": "5"
-        },
-        "command": "UPLOAD_FILE_FROM_BODY"
+        "path": {
+          "data": "{{update_file_name.text}}",
+          "viewType": "component",
+          "componentData": "{{update_file_name.text}}"
+        }
       }
     },
     "executeOnLoad": false,

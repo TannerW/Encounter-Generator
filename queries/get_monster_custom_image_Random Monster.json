@@ -18,33 +18,73 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "formData": {
-        "bucket": "custom-dnd-monster-app-images",
+        "bucket": {
+          "data": "custom-dnd-monster-app-images",
+          "viewType": "component",
+          "componentData": "custom-dnd-monster-app-images"
+        },
+        "command": {
+          "data": "LIST",
+          "viewType": "component",
+          "componentData": "LIST"
+        },
         "list": {
+          "prefix": {
+            "data": "{{get_one_random_monster.data[0].monster_id}}.png",
+            "viewType": "component",
+            "componentData": "{{get_one_random_monster.data[0].monster_id}}.png"
+          },
           "where": {
-            "condition": "AND",
-            "children": [
+            "data": {
+              "condition": "AND",
+              "children": [
+                {
+                  "condition": "EQ"
+                }
+              ]
+            },
+            "viewType": "component",
+            "componentData": {
+              "condition": "AND",
+              "children": [
+                {
+                  "condition": "EQ"
+                }
+              ]
+            }
+          },
+          "sortBy": {
+            "data": [
               {
-                "condition": "EQ"
+                "column": "",
+                "order": "Ascending"
+              }
+            ],
+            "viewType": "component",
+            "componentData": [
+              {
+                "column": "",
+                "order": "Ascending"
               }
             ]
           },
-          "signedUrl": "YES",
-          "unSignedUrl": "YES",
-          "sortBy": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ],
-          "prefix": "{{get_one_random_monster.data[0].monster_id}}.png"
-        },
-        "command": "LIST"
+          "signedUrl": {
+            "data": "YES",
+            "viewType": "component",
+            "componentData": "YES"
+          },
+          "unSignedUrl": {
+            "data": "YES",
+            "viewType": "component",
+            "componentData": "YES"
+          }
+        }
       }
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "formData.list.prefix"
+        "key": "formData.list.prefix.data"
       }
     ],
     "isValid": true,

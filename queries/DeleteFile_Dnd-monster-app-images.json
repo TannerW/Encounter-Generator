@@ -16,12 +16,28 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "{{File_List.selectedItem.fileName}}",
       "encodeParamsToggle": true,
-      "body": "{\n\t\"data\": \"null\"\n}",
       "formData": {
-        "bucket": "dnd-monster-app-images",
-        "command": "DELETE_FILE"
+        "body": {
+          "data": "{\n\t\"data\": \"null\"\n}",
+          "viewType": "component",
+          "componentData": "{\n\t\"data\": \"null\"\n}"
+        },
+        "bucket": {
+          "data": "dnd-monster-app-images",
+          "viewType": "component",
+          "componentData": "dnd-monster-app-images"
+        },
+        "command": {
+          "data": "DELETE_FILE",
+          "viewType": "component",
+          "componentData": "DELETE_FILE"
+        },
+        "path": {
+          "data": "{{File_List.selectedItem.fileName}}",
+          "viewType": "component",
+          "componentData": "{{File_List.selectedItem.fileName}}"
+        }
       }
     },
     "executeOnLoad": false,

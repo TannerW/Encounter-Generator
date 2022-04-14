@@ -16,29 +16,40 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 100000,
       "paginationType": "NONE",
-      "path": "{{(!!folder_name.text ? folder_name.text + \"/\" : \"\") + this.params.name}}",
       "encodeParamsToggle": true,
-      "body": "{{FilePicker.files[this.params.fileIndex]}}",
       "formData": {
-        "bucket": "dnd-monster-app-images",
-        "read": {
-          "usingBase64Encoding": "YES",
-          "dataType": "YES",
-          "expiry": "5"
+        "body": {
+          "data": "{{FilePicker.files[this.params.fileIndex]}}",
+          "viewType": "component",
+          "componentData": "{{FilePicker.files[this.params.fileIndex]}}"
+        },
+        "bucket": {
+          "data": "dnd-monster-app-images",
+          "viewType": "component",
+          "componentData": "dnd-monster-app-images"
+        },
+        "command": {
+          "data": "UPLOAD_FILE_FROM_BODY",
+          "viewType": "component",
+          "componentData": "UPLOAD_FILE_FROM_BODY"
         },
         "create": {
-          "dataType": "YES",
-          "expiry": "5"
+          "dataType": {
+            "data": "YES",
+            "viewType": "component",
+            "componentData": "YES"
+          },
+          "expiry": {
+            "data": "5",
+            "viewType": "component",
+            "componentData": "5"
+          }
         },
-        "list": {
-          "prefix": "",
-          "expiry": "5",
-          "signedUrl": "NO"
-        },
-        "delete": {
-          "expiry": "5"
-        },
-        "command": "UPLOAD_FILE_FROM_BODY"
+        "path": {
+          "data": "{{(!!folder_name.text ? folder_name.text + \"/\" : \"\") + this.params.name}}",
+          "viewType": "component",
+          "componentData": "{{(!!folder_name.text ? folder_name.text + \"/\" : \"\") + this.params.name}}"
+        }
       }
     },
     "executeOnLoad": false,

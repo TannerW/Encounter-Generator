@@ -1,11 +1,9 @@
 {
-  "isPublic": true,
   "viewMode": false,
   "appIsExample": false,
   "unreadCommentThreads": 0,
   "color": "#D6D1F2",
   "icon": "sunflower",
-  "slug": "dnd-encounter-generator",
   "unpublishedAppLayout": {
     "type": "MOBILE"
   },
@@ -13,6 +11,8 @@
     "type": "MOBILE"
   },
   "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "isManualUpdate": false,
   "createdAt": {
     "seconds": 1648164983,
     "nanos": 640000000

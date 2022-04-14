@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1560,
+          "bottomRow": 1890,
           "containerStyle": "none",
           "snapRows": 79,
           "parentRowSpace": 1,
@@ -612,6 +612,69 @@
               "chartName": "Environments",
               "xAxisName": "Environments",
               "chartType": "COLUMN_CHART"
+            },
+            {
+              "widgetName": "chart_tags",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 155,
+              "bottomRow": 187,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "0mo435bcnu": {
+                  "seriesName": "Tags",
+                  "data": "{{count_tags.data.map( (obj) =>{ return  {'x': obj.unnest, 'y': obj.count } })}}"
+                }
+              },
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.0mo435bcnu.data"
+                }
+              ],
+              "leftColumn": 0,
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "dukfnmnk4e",
+              "rightColumn": 64,
+              "widgetId": "l0qagssanr",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "slant",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "Quantity",
+              "chartName": "Tags",
+              "xAxisName": "Tags",
+              "chartType": "COLUMN_CHART"
             }
           ]
         },
@@ -670,6 +733,14 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Analysis Analytics_count_tags",
+              "name": "count_tags",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Analysis Analytics_count_types",
               "name": "count_types",
               "confirmBeforeExecute": false,
@@ -712,6 +783,7 @@
           "MainContainer",
           "Text1",
           "bar_percent_avrae_parsed",
+          "chart_tags",
           "graph_count_cr",
           "graph_count_envs",
           "graph_count_subtype",

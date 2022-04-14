@@ -16,38 +16,49 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 100000,
       "paginationType": "NONE",
-      "path": "{{get_one_random_monster.data[0].monster_id}}.png",
       "encodeParamsToggle": true,
-      "body": "{{Import_custom_image.files[Import_custom_image.files.length -1]}}",
       "formData": {
-        "bucket": "custom-dnd-monster-app-images",
-        "read": {
-          "usingBase64Encoding": "YES",
-          "dataType": "YES",
-          "expiry": "5"
+        "body": {
+          "data": "{{Import_custom_image.files[Import_custom_image.files.length -1]}}",
+          "viewType": "component",
+          "componentData": "{{Import_custom_image.files[Import_custom_image.files.length -1]}}"
+        },
+        "bucket": {
+          "data": "custom-dnd-monster-app-images",
+          "viewType": "component",
+          "componentData": "custom-dnd-monster-app-images"
+        },
+        "command": {
+          "data": "UPLOAD_FILE_FROM_BODY",
+          "viewType": "component",
+          "componentData": "UPLOAD_FILE_FROM_BODY"
         },
         "create": {
-          "dataType": "YES",
-          "expiry": "5"
+          "dataType": {
+            "data": "YES",
+            "viewType": "component",
+            "componentData": "YES"
+          },
+          "expiry": {
+            "data": "5",
+            "viewType": "component",
+            "componentData": "5"
+          }
         },
-        "list": {
-          "prefix": "",
-          "expiry": "5",
-          "signedUrl": "NO"
-        },
-        "delete": {
-          "expiry": "5"
-        },
-        "command": "UPLOAD_FILE_FROM_BODY"
+        "path": {
+          "data": "{{get_one_random_monster.data[0].monster_id}}.png",
+          "viewType": "component",
+          "componentData": "{{get_one_random_monster.data[0].monster_id}}.png"
+        }
       }
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "body"
+        "key": "formData.body.data"
       },
       {
-        "key": "path"
+        "key": "formData.path.data"
       }
     ],
     "isValid": true,

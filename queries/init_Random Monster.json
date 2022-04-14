@@ -23,7 +23,7 @@
       "jsArguments": [],
       "isAsync": true
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,12 +35,12 @@
     "jsonPathKeys": [
       "() => {\n\t\tstoreValue(\"randomness_control_default\", [\"\"]);\n\t\tstoreValue(\"randomness_control_current\", appsmith.store.randomness_control_default);\n\t\tresetWidget(\"rand_control_switch_group\", true);\n\t}"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Random Monster_init",
+  "id": "Random Monster_settings_helper.init",
   "deleted": false,
   "gitSyncId": "623d0077c45d83022e3fd3ff_6251b4e69f8fa45475aecc63"
 }

@@ -18,42 +18,78 @@
       "paginationType": "NONE",
       "path": "",
       "encodeParamsToggle": true,
-      "body": "{\n\t\"data\": \"\"\n}",
       "formData": {
-        "bucket": "dnd-monster-app-images",
-        "read": {
-          "usingBase64Encoding": "YES",
-          "dataType": "YES",
-          "expiry": "5"
+        "body": {
+          "data": "{\n\t\"data\": \"\"\n}",
+          "viewType": "component",
+          "componentData": "{\n\t\"data\": \"\"\n}"
         },
-        "create": {
-          "dataType": "YES",
-          "expiry": "5"
+        "bucket": {
+          "data": "dnd-monster-app-images",
+          "viewType": "component",
+          "componentData": "dnd-monster-app-images"
+        },
+        "command": {
+          "data": "LIST",
+          "viewType": "component",
+          "componentData": "LIST"
         },
         "list": {
-          "prefix": "{{search_input.text}}",
+          "prefix": {
+            "data": "{{search_input.text}}",
+            "viewType": "component",
+            "componentData": "{{search_input.text}}"
+          },
           "where": {
-            "condition": "AND",
-            "children": [
+            "data": {
+              "condition": "AND",
+              "children": [
+                {
+                  "condition": "EQ"
+                }
+              ]
+            },
+            "viewType": "component",
+            "componentData": {
+              "condition": "AND",
+              "children": [
+                {
+                  "condition": "EQ"
+                }
+              ]
+            }
+          },
+          "sortBy": {
+            "data": [
               {
-                "condition": "EQ"
+                "column": "",
+                "order": "Ascending"
+              }
+            ],
+            "viewType": "component",
+            "componentData": [
+              {
+                "column": "",
+                "order": "Ascending"
               }
             ]
           },
-          "expiry": "{{ 60 * 24 }}",
-          "signedUrl": "YES",
-          "unSignedUrl": "YES",
-          "sortBy": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ]
-        },
-        "delete": {
-          "expiry": "5"
-        },
-        "command": "LIST"
+          "expiry": {
+            "data": "{{ 60 * 24 }}",
+            "viewType": "component",
+            "componentData": "{{ 60 * 24 }}"
+          },
+          "signedUrl": {
+            "data": "YES",
+            "viewType": "component",
+            "componentData": "YES"
+          },
+          "unSignedUrl": {
+            "data": "YES",
+            "viewType": "component",
+            "componentData": "YES"
+          }
+        }
       }
     },
     "executeOnLoad": true,
