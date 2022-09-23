@@ -1,4 +1,26 @@
 {
+  "pages": [
+    {
+      "id": "Random Monster",
+      "isDefault": true
+    },
+    {
+      "id": "Analysis Analytics",
+      "isDefault": false
+    },
+    {
+      "id": "Ellipsis Tag Resolver",
+      "isDefault": false
+    },
+    {
+      "id": "Create an Environment",
+      "isDefault": false
+    },
+    {
+      "id": "Dnd-monster-app-images",
+      "isDefault": false
+    }
+  ],
   "viewMode": false,
   "appIsExample": false,
   "unreadCommentThreads": 0,
@@ -13,9 +35,5 @@
   "evaluationVersion": 2,
   "applicationVersion": 2,
   "isManualUpdate": false,
-  "createdAt": {
-    "seconds": 1648164983,
-    "nanos": 640000000
-  },
   "deleted": false
 }
