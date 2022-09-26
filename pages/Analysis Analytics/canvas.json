@@ -19,13 +19,14 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 56,
+          "version": 61,
           "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
           "children": [
             {
+              "boxShadow": "none",
               "widgetName": "bar_percent_avrae_parsed",
               "isCanvas": false,
               "dynamicPropertyPathList": [],
@@ -50,6 +51,7 @@
               ],
               "key": "kxf30cfj1f",
               "showResult": true,
+              "labelTextSize": "0.875rem",
               "rightColumn": 64,
               "widgetId": "nhgraq8170",
               "isVisible": true,
@@ -58,10 +60,12 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "borderRadius": "0px",
               "progress": "{{(num_avrae_parsed.data[0].count / num_total_monsters.data[0].count * 100).toPrecision(4)}}",
               "barType": "determinate"
             },
             {
+              "boxShadow": "none",
               "widgetName": "percent_avrae_parsed",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -74,11 +78,13 @@
               "parentColumnSpace": 6.84375,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 0,
               "dynamicBindingPathList": [],
               "truncateButtonColor": "#FFC13D",
               "text": "Percent of Avrae Parsed",
               "key": "2p4jbgkjp5",
+              "labelTextSize": "0.875rem",
               "rightColumn": 31,
               "textAlign": "LEFT",
               "widgetId": "ydf8rb0z8m",
@@ -89,9 +95,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "num_environment",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -104,6 +112,7 @@
               "parentColumnSpace": 6.84375,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
@@ -113,6 +122,7 @@
               "truncateButtonColor": "#FFC13D",
               "text": "Number of Environments: {{num_environments.data[0].count}}",
               "key": "2p4jbgkjp5",
+              "labelTextSize": "0.875rem",
               "rightColumn": 29,
               "textAlign": "LEFT",
               "widgetId": "9wazwtgf5f",
@@ -123,9 +133,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "num_monsters",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -138,6 +150,7 @@
               "parentColumnSpace": 6.84375,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
@@ -147,6 +160,7 @@
               "truncateButtonColor": "#FFC13D",
               "text": "Number of Monsters: {{num_total_monsters.data[0].count}}",
               "key": "2p4jbgkjp5",
+              "labelTextSize": "0.875rem",
               "rightColumn": 29,
               "textAlign": "LEFT",
               "widgetId": "wlv0ihcw05",
@@ -157,9 +171,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "Divider1",
               "thickness": 2,
               "displayName": "Divider",
@@ -177,6 +193,7 @@
               "dynamicBindingPathList": [],
               "key": "tkdqjjkqi1",
               "dividerColor": "#EBEBEB",
+              "labelTextSize": "0.875rem",
               "orientation": "vertical",
               "strokeStyle": "solid",
               "rightColumn": 32,
@@ -186,9 +203,11 @@
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
-              "isLoading": false
+              "isLoading": false,
+              "borderRadius": "0px"
             },
             {
+              "boxShadow": "none",
               "widgetName": "Divider2",
               "thickness": 2,
               "displayName": "Divider",
@@ -204,6 +223,7 @@
               "leftColumn": 0,
               "key": "tkdqjjkqi1",
               "dividerColor": "#EBEBEB",
+              "labelTextSize": "0.875rem",
               "orientation": "horizontal",
               "strokeStyle": "solid",
               "rightColumn": 64,
@@ -213,9 +233,11 @@
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
-              "isLoading": false
+              "isLoading": false,
+              "borderRadius": "0px"
             },
             {
+              "boxShadow": "none",
               "widgetName": "num_of_npcs",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -228,6 +250,7 @@
               "parentColumnSpace": 6.84375,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 32,
               "dynamicBindingPathList": [
                 {
@@ -237,6 +260,7 @@
               "truncateButtonColor": "#FFC13D",
               "text": "Number of NPCs: {{num_npcs.data[0].count}}",
               "key": "dq9l1pkz29",
+              "labelTextSize": "0.875rem",
               "rightColumn": 64,
               "textAlign": "LEFT",
               "widgetId": "pz11gpbfza",
@@ -247,9 +271,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "num_of_seen_npcs",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -262,6 +288,7 @@
               "parentColumnSpace": 6.84375,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 32,
               "dynamicBindingPathList": [
                 {
@@ -271,6 +298,7 @@
               "truncateButtonColor": "#FFC13D",
               "text": "Number of Seen NPCs: {{num_npcs_seen.data[0].count}}",
               "key": "dq9l1pkz29",
+              "labelTextSize": "0.875rem",
               "rightColumn": 64,
               "textAlign": "LEFT",
               "widgetId": "cgejucm3at",
@@ -281,9 +309,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "num_of_ddb_descriptions",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -296,6 +326,7 @@
               "parentColumnSpace": 6.84375,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
@@ -305,6 +336,7 @@
               "truncateButtonColor": "#FFC13D",
               "text": "Monsters with DDB Descriptions: {{num_monsters_with_ddb_desc.data[0].count}}",
               "key": "dq9l1pkz29",
+              "labelTextSize": "0.875rem",
               "rightColumn": 29,
               "textAlign": "LEFT",
               "widgetId": "uqt9k8i4t5",
@@ -315,9 +347,11 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
+              "boxShadow": "none",
               "widgetName": "Text1",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
@@ -330,6 +364,7 @@
               "parentColumnSpace": 6.84375,
               "dynamicTriggerPathList": [],
               "overflow": "NONE",
+              "fontFamily": "System Default",
               "leftColumn": 32,
               "dynamicBindingPathList": [
                 {
@@ -339,6 +374,7 @@
               "truncateButtonColor": "#FFC13D",
               "text": "Number of Avrae Parsed: {{num_avrae_parsed.data[0].count}}",
               "key": "dq9l1pkz29",
+              "labelTextSize": "0.875rem",
               "rightColumn": 64,
               "textAlign": "LEFT",
               "widgetId": "b9glhtzeyu",
@@ -349,10 +385,12 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
             },
             {
               "setAdaptiveYMin": true,
+              "boxShadow": "none",
               "widgetName": "CR",
               "allowScroll": false,
               "displayName": "Chart",
@@ -371,10 +409,17 @@
               "animateLoading": true,
               "parentColumnSpace": 6.84375,
               "dynamicTriggerPathList": [],
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
               "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
                   "key": "chartData.7cqcnod5n4.data"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
                 }
               ],
               "customFusionChartConfig": {
@@ -403,8 +448,10 @@
                 }
               },
               "key": "dukfnmnk4e",
+              "labelTextSize": "0.875rem",
               "rightColumn": 64,
               "widgetId": "ntshvyp843",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "version": 1,
               "parentId": "0",
@@ -413,11 +460,13 @@
               "isLoading": false,
               "yAxisName": "Quantity",
               "chartName": "CR",
+              "borderRadius": "0px",
               "xAxisName": "CR",
               "chartType": "COLUMN_CHART"
             },
             {
               "setAdaptiveYMin": false,
+              "boxShadow": "none",
               "widgetName": "graph_count_cr",
               "allowScroll": false,
               "displayName": "Chart",
@@ -435,9 +484,16 @@
               },
               "animateLoading": true,
               "dynamicTriggerPathList": [],
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
               "dynamicBindingPathList": [
                 {
                   "key": "chartData.dedzaf7g7p.data"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
                 }
               ],
               "leftColumn": 0,
@@ -467,8 +523,10 @@
                 }
               },
               "key": "dukfnmnk4e",
+              "labelTextSize": "0.875rem",
               "rightColumn": 64,
               "widgetId": "w9r0g22vme",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "version": 1,
               "parentId": "0",
@@ -477,10 +535,12 @@
               "isLoading": false,
               "yAxisName": "Quantity",
               "chartName": "Monster Type",
+              "borderRadius": "0px",
               "xAxisName": "Monster type",
               "chartType": "COLUMN_CHART"
             },
             {
+              "boxShadow": "none",
               "widgetName": "graph_count_subtype",
               "allowScroll": false,
               "displayName": "Chart",
@@ -498,9 +558,16 @@
               },
               "animateLoading": true,
               "dynamicTriggerPathList": [],
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
               "dynamicBindingPathList": [
                 {
                   "key": "chartData.960g8pf0y3.data"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
                 }
               ],
               "leftColumn": 0,
@@ -530,8 +597,10 @@
                 }
               },
               "key": "dukfnmnk4e",
+              "labelTextSize": "0.875rem",
               "rightColumn": 64,
               "widgetId": "9xszq7ij4h",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "version": 1,
               "parentId": "0",
@@ -540,10 +609,12 @@
               "isLoading": false,
               "yAxisName": "Quantity",
               "chartName": "Monster Subtype",
+              "borderRadius": "0px",
               "xAxisName": "Monster Subtype",
               "chartType": "COLUMN_CHART"
             },
             {
+              "boxShadow": "none",
               "widgetName": "graph_count_envs",
               "allowScroll": false,
               "displayName": "Chart",
@@ -561,9 +632,16 @@
               },
               "animateLoading": true,
               "dynamicTriggerPathList": [],
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
               "dynamicBindingPathList": [
                 {
                   "key": "chartData.9h9k8r1jk1.data"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
                 }
               ],
               "leftColumn": 0,
@@ -593,8 +671,10 @@
                 }
               },
               "key": "dukfnmnk4e",
+              "labelTextSize": "0.875rem",
               "rightColumn": 64,
               "widgetId": "20eoc6hxid",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "version": 1,
               "parentId": "0",
@@ -603,10 +683,12 @@
               "isLoading": false,
               "yAxisName": "Quantity",
               "chartName": "Environments",
+              "borderRadius": "0px",
               "xAxisName": "Environments",
               "chartType": "COLUMN_CHART"
             },
             {
+              "boxShadow": "none",
               "widgetName": "chart_tags",
               "allowScroll": false,
               "displayName": "Chart",
@@ -624,9 +706,16 @@
               },
               "animateLoading": true,
               "dynamicTriggerPathList": [],
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
               "dynamicBindingPathList": [
                 {
                   "key": "chartData.0mo435bcnu.data"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
                 }
               ],
               "leftColumn": 0,
@@ -656,8 +745,10 @@
                 }
               },
               "key": "dukfnmnk4e",
+              "labelTextSize": "0.875rem",
               "rightColumn": 64,
               "widgetId": "l0qagssanr",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
               "version": 1,
               "parentId": "0",
@@ -666,6 +757,7 @@
               "isLoading": false,
               "yAxisName": "Quantity",
               "chartName": "Tags",
+              "borderRadius": "0px",
               "xAxisName": "Tags",
               "chartType": "COLUMN_CHART"
             }
